@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Run Buddy Inc.
 
 ## Purpose
@@ -12,3 +13,7 @@ https://lernantino.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by [your name]
+=======
+# runBuddy-v2
+ module 2 project
+>>>>>>> parent of d15aab9 (Update README.md)
