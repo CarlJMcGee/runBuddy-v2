@@ -368,6 +368,27 @@ section {
 /* media queries */
   /* screen for smaller desktop screens and smaller */
     @media screen and (max-width: 980px) {
+      header {
+        padding-bottom: 0;
+        justify-content: center;
+      }
+      header h1 {
+        width: 100%;
+        text-align: center;
+      }
+      header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+      }
+      header nav ul li {
+        font-size: 20px;
+      }
+      footer h2, footer div {
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+      }
     }
 
   /* screen for tablets and smaller */
