@@ -1,3 +1,9 @@
+:root {
+  --color-darkBlue: #024e76;
+  --color-lightBlue: #39a6b2;
+  --color-yellow: #fce138;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +11,7 @@
 }
 
 body {
-  color: #39a6b2;
+  color: var(--color-lightBlue);
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -17,20 +23,27 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px 35px;
-  background-color: #39a6b2;
+  background-color: var(--color-lightBlue);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
 }
 
 header h1 {
   font-weight: bold;
   margin: 0;
   font-size: 36px;
-  color: #fce138;
+  color: var(--color-yellow);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
   text-decoration: none;
-  color: #fce138;
+  color: var(--color-yellow);
 }
 
 header nav {
@@ -52,13 +65,20 @@ header nav ul li a {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+header nav ul li a:hover {
+  color: var(--color-darkBlue);
+  background-color: var(--color-yellow);
+  border-radius: 10px;
+  text-shadow: none;
+}
+
 /* HEADER / NAVBAR STYLES END */
 
 
 
 /* FOOTER STYLES START */
 footer {
-  background: #fce138;
+  background: var(--color-yellow);
   padding: 40px 35px;
   width: 100%;
   display: flex;
@@ -67,7 +87,7 @@ footer {
 }
 
 footer h2 {
-  color: #024e76;
+  color: var(--color-darkBlue);
   font-size: 30px;
   margin: 0;
   display: flex;
@@ -80,7 +100,7 @@ footer div {
 }
 
 footer a {
-  color: #024e76;
+  color: var(--color-darkBlue);
 }
 /* END FOOTER STYLES */
 
@@ -93,7 +113,8 @@ section {
 .hero {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: 80%;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -118,13 +139,13 @@ section {
 }
 
 .hero-form {
-  border: 3px solid #024e76;
+  border: 3px solid var(--color-darkBlue);
   border-radius: 15px;
   background-color: rgba(252, 225, 56, 0.8);
   padding: 20px;
   width: 40%;
   margin: 3.5%;
-  color: #024e76;
+  color: var(--color-darkBlue);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -137,14 +158,20 @@ section {
 }
 
 .form-input {
-  border: 1px solid #024e76;
+  border: 1px solid var(--color-darkBlue);
   border-radius: 10px;
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--color-darkBlue);
   width: 100%;
   margin-bottom: 15px; 
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
 .hero-form label {
@@ -152,13 +179,17 @@ section {
 }
 
 .hero-form button {
-  color: #fce138;
-  background-color: #024e76;
+  color: var(--color-yellow);
+  background-color: var(--color-darkBlue);
   border: none;
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 16px;
 } 
+
+.hero-form button:hover {
+  background-color: var(--color-lightBlue);
+}
 /* HERO STYLES END */
 
 
@@ -166,19 +197,20 @@ section {
 .section-title {
   font-size: 48px;
   border-bottom: 3px solid;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding-bottom: 20px;
   text-align: center;
   margin: 0 auto 35px auto;
   width: 50%;
-  color: #024e76;
+  color: var(--color-darkBlue);
 }
 
 .primary-border {
-  border-color: #fce138;
+  border-color: var(--color-yellow);
 }
 
 .secondary-border {
-  border-color: #39a6b2;
+  border-color: var(--color-lightBlue);
 }
 /* SECTION TITLE STYLES END */
 
@@ -186,7 +218,7 @@ section {
 
 .intro p {
   line-height: 1.7;
-  color: #39a6b2;
+  color: var(--color-lightBlue);
   width: 80%;
   margin: 0 auto;
   font-size: 20px;
@@ -197,18 +229,21 @@ section {
 
 /* WHAT YOU DO STYLES START */
 .steps { 
-  background: #fce138;
+  background: var(--color-yellow);
 }
 
 .step {
   margin: 50px auto;
   padding-bottom: 50PX;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.step:last-child {
+  border-bottom: 1px solid var(--color-lightBlue);
 }
 
 .step-info {
@@ -228,7 +263,7 @@ section {
 }
 
 .step h3 {
-  color: #024e76;
+  color: var(--color-darkBlue);
   font-size: 46px;
   flex: 1 30%;
 }
@@ -238,14 +273,14 @@ section {
 }
 
 .step-text p {
-  color: #39a6b2;
+  color: var(--color-lightBlue);
   font-size: 18px;
 }
 
 .step-text h4 {
   font-size: 26px;
   line-height: 1.5;
-  color: #024e76;
+  color: var(--color-darkBlue);
 }
 
 /* WHAT YOU DO STYLES END */
@@ -262,8 +297,8 @@ section {
 
 .trainer {
   margin: 20px;
-  background: #024e76;
-  color: #fce138;
+  background: var(--color-darkBlue);
+  color: var(--color-yellow);
   flex: 1;
 }
 
@@ -293,11 +328,11 @@ section {
 
 /* REACH OUT STYLES START */
 .contact {
-  background: #024e76;
+  background: var(--color-darkBlue);
 }
 
 .contact h2 {
-  color: #fce138;
+  color: var(--color-yellow);
 }
 
 .contact-info {
@@ -321,7 +356,7 @@ section {
 }
 
 .contact-info h3 {
-  color: #fce138;
+  color: var(--color-yellow);
   font-size: 32px;
 }
 
@@ -333,30 +368,41 @@ section {
 }
 
 .contact-us-container input, .contact-us-container textarea {
-  border: 1px solid #024e76;
+  border: 1px solid var(--color-darkBlue);
   border-radius: 10px;
   display: block;
   padding: 7px 15px;
   font-size: 16px;
-  color: #024e76;
+  color: var(--color-darkBlue);
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-us-container input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 
 .contact-us-container button {
   width: 100%;
   border: none;
   border-radius: 10px;
-  background-color: #fce138;
-  color: #024e76;
+  background-color: var(--color-yellow);
+  color: var(--color-darkBlue);
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
 }
 
+.contact-us-container button:hover {
+  color: var(--color-yellow);
+  background-color: var(--color-lightBlue);
+}
+
 .contact-info a {
-  color: #fce138;
+  color: var(--color-yellow);
 }
 
 
@@ -383,6 +429,7 @@ section {
       header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
       }
       header h1 {
         width: 100%;
